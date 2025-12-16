@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beacon Traffic - Home</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* === BACKGROUND IMAGE SETTINGS === */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-position: center calc(50% - 260px);
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* optional parallax effect */
+      background-color: #0f172a; /* fallback color while loading */
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(29, 28, 28, 0.473); /* gray wash; tweak alpha */
+  backdrop-filter: blur(6px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero {
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7.5vw, 5.5rem);
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0;
+      z-index: 3;
+      text-shadow: 0 0 25px rgba(0,0,0,0.7);
+    }
+
+    
+/* make sure your content uses higher z-index than overlay */
+header, .section, footer { position: relative; z-index: 2; }
+    
+  </style>
+</head>
+
+<body>
+  <!-- translucent overlay -->
+  <div class="overlay" aria-hidden="true"></div>
+
+  <header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Beacon.png" alt="Logo">
+    </div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Beacon Traffic Consulting </h1>
+  </section>
+
+ <section class="section" style="position: relative; z-index: 3;">
+  <h1 style="
+    position: relative;
+    z-index: 3;
+    color: #003f91;
+    text-shadow:
+        0 0 5px white,
+        0 0 10px white,
+        0 0 10px white,
+        0 0 10px white;
+">
+    Smart Solutions for Safer Roads
+</h1>
+  <p>Certified DBE | Transportation & Traffic Engineering</p>
+</section>
+
+  <footer>
+    Beacon Traffic © 2025. All rights reserved.
+  </footer>
+</body>
+</html>
